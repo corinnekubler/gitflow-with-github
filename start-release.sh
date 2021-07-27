@@ -19,7 +19,7 @@ echo "Pull last changes"
 git pull
 
 echo "Start release with maven git flow plugin for version $VERSION"
-mvn gitflow:release-start
+mvn gitflow:release-start -DreleaseVersion $VERSION
 
 echo "Pushing release branch"
 git push
