@@ -4,9 +4,16 @@ DEVELOPMENT=$2
 set -e
 
 # check parameter
-if [[ -z $RELEASE ||  -z $DEVELOPMENT]];
+if [ -z $RELEASE];
 then
-    echo `date`" - Missing mandatory arguments : versions. "
+    echo `date`" - Missing mandatory arguments : version. "
+    echo `date`" - Usage: ./start-release.sh  [RELEASE] [DEVELOPMENT] . "
+    exit 1
+fi
+
+if [ -z DEVELOPMENT];
+then
+    echo `date`" - Missing mandatory arguments : version. "
     echo `date`" - Usage: ./start-release.sh  [RELEASE] [DEVELOPMENT] . "
     exit 1
 fi
