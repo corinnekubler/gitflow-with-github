@@ -74,7 +74,9 @@
             <artifactId>gitflow-maven-plugin</artifactId>
             <version>1.16.0</version>
             <configuration>
-              <!-- optional configuration -->
+                <useSnapshotInRelease>true</useSnapshotInRelease>
+                <pushRemote>false</pushRemote>
+                <skipTestProject>true</skipTestProject>
             </configuration>
           </plugin>
         </plugins>
