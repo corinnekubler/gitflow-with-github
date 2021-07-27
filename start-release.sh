@@ -1,3 +1,4 @@
+set -e
 echo "Starting release "
 
 echo "Checking out develop branch"
