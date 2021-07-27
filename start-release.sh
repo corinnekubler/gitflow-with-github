@@ -10,8 +10,9 @@ git pull
 echo "Start release with maven git flow plugin"
 mvn gitflow:release-start
 MVN_VERSION=$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
+RELEASE_VERSION=${MVN_VERSION//".-SNAPSHOT"/""}
 echo "Pushing release branch"
-git push --set-upstream origin release/$MVN_VERSION
+git push --set-upstream origin release/$RELEASE_VERSION
 
 
 echo "Release branch was pushed with snapshot version. The deployment should have been trigerred on QA env."
