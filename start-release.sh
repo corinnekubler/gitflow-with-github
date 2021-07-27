@@ -1,24 +1,6 @@
-RELEASE=$1
-DEVELOPMENT=$2
-# exit as soon as there is an error
 set -e
 
-# check parameter
-if [ -z $RELEASE];
-then
-    echo `date`" - Missing mandatory arguments : version. "
-    echo `date`" - Usage: ./start-release.sh  [RELEASE] [DEVELOPMENT] . "
-    exit 1
-fi
-
-if [ -z DEVELOPMENT];
-then
-    echo `date`" - Missing mandatory arguments : version. "
-    echo `date`" - Usage: ./start-release.sh  [RELEASE] [DEVELOPMENT] . "
-    exit 1
-fi
-
-echo "Starting release $RELEASE"
+echo "Starting release"
 
 echo "Checking out develop branch"
 git checkout develop
@@ -26,10 +8,10 @@ echo "Pull last changes"
 git pull
 
 echo "Start release with maven git flow plugin"
-mvn gitflow:release-start -DreleaseVersion=$RELEASE -DdevelopmentVersion=$DEVELOPMENT
-
+mvn gitflow:release-start
+MVN_VERSION=$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
 echo "Pushing release branch"
-git push --set-upstream origin release/$RELEASE
+git push --set-upstream origin release/$MVN_VERSION
 
 
 echo "Release branch was pushed with snapshot version. The deployment should have been trigerred on QA env."
