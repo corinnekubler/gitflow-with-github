@@ -6,11 +6,11 @@
     <groupId>org.baeldung</groupId>
 
 
-    <version>1.15-SNAPSHOT</version>
+    <version>1.15</version>
   </parent>
 
   <artifactId>bot</artifactId>
-  <version>1.15-SNAPSHOT</version>
+  <version>1.15</version>
 
 
 
