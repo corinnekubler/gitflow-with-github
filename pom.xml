@@ -12,7 +12,8 @@
     <artifactId>parent-project</artifactId>
 
 
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
+
 
 
     <name>parent-project</name>
@@ -74,9 +75,13 @@
             <artifactId>gitflow-maven-plugin</artifactId>
             <version>1.16.0</version>
             <configuration>
+
+
                 <useSnapshotInRelease>true</useSnapshotInRelease>
                 <pushRemote>false</pushRemote>
                 <skipTestProject>true</skipTestProject>
+
+
             </configuration>
           </plugin>
         </plugins>
