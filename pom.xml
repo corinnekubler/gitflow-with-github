@@ -80,6 +80,7 @@
                 <useSnapshotInRelease>true</useSnapshotInRelease>
                 <pushRemote>false</pushRemote>
                 <skipTestProject>true</skipTestProject>
+                <keepBranch>true</keepBranch>
 
 
             </configuration>
