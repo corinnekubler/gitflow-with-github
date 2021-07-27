@@ -6,10 +6,10 @@
     <groupId>org.baeldung</groupId>
 
 
-    <version>1.12-SNAPSHOT</version>
+    <version>1.13-SNAPSHOT</version>
   </parent>
 
-  <version>1.12-SNAPSHOT</version>
+  <version>1.13-SNAPSHOT</version>
 
   <artifactId>core</artifactId>
 
