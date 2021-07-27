@@ -12,7 +12,7 @@ mvn gitflow:release-start
 MVN_VERSION=$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
 find="-SNAPSHOT"
 replace=""
-$RELEASE_VERSION=${MVN_VERSION//$find/$replace}
+RELEASE_VERSION=${MVN_VERSION//$find/$replace}
 echo "RELEASE $RELEASE_VERSION"
 echo "Pushing release branch"
 git push --set-upstream origin release/$RELEASE_VERSION
