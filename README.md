@@ -6,4 +6,3 @@ feature-1-commit-2
 fix for release 1.3
 
 
-
