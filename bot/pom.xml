@@ -5,11 +5,11 @@
     <artifactId>parent-project</artifactId>
     <groupId>org.baeldung</groupId>
 
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
   </parent>
 
   <artifactId>bot</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.2</version>
 
 
   <name>bot</name>

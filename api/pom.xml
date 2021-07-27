@@ -4,13 +4,13 @@
   <parent>
     <artifactId>parent-project</artifactId>
     <groupId>org.baeldung</groupId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.2</version>
   </parent>
 
   <groupId>org.baeldung</groupId>
   <artifactId>api</artifactId>
 
-  <version>1.2-SNAPSHOT</version>
+  <version>1.2</version>
 
 
   <name>api</name>
