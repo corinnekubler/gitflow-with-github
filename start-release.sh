@@ -1,10 +1,10 @@
 RELEASE-VERSION=$1
-DEVELOPMENT-VERSION=$1
+DEVELOPMENT-VERSION=$2
 # exit as soon as there is an error
 set -e
 
 # check parameter
-if [[ -z $RELEASE-VERSION |  -z $DEVELOPMENT-VERSION]];
+if [[ -z $RELEASE-VERSION ||  -z $DEVELOPMENT-VERSION]];
 then
     echo `date`" - Missing mandatory arguments : versions. "
     echo `date`" - Usage: ./start-release.sh  [RELEASE-VERSION] [DEVELOPMENT-VERSION] . "
