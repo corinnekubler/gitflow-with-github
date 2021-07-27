@@ -6,10 +6,12 @@
     <groupId>org.baeldung</groupId>
 
 
+
     <version>1.16</version>
   </parent>
 
   <version>1.16</version>
+
 
   <artifactId>core</artifactId>
 
