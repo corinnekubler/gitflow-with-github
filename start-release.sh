@@ -10,7 +10,10 @@ git pull
 echo "Start release with maven git flow plugin"
 mvn gitflow:release-start
 MVN_VERSION=$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
-RELEASE_VERSION=${MVN_VERSION//".-SNAPSHOT"/""}
+find="-SNAPSHOT"
+replace=""
+$RELEASE_VERSION=${MVN_VERSION//$find/$replace}
+echo "RELEASE $RELEASE_VERSION"
 echo "Pushing release branch"
 git push --set-upstream origin release/$RELEASE_VERSION
 
