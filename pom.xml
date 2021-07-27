@@ -12,7 +12,9 @@
     <artifactId>parent-project</artifactId>
 
 
-    <version>1.2</version>
+
+    <version>1.4</version>
+
 
 
 
@@ -80,6 +82,7 @@
                 <useSnapshotInRelease>true</useSnapshotInRelease>
                 <pushRemote>false</pushRemote>
                 <skipTestProject>true</skipTestProject>
+                <keepBranch>true</keepBranch>
 
 
             </configuration>
