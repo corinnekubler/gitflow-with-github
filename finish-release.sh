@@ -21,3 +21,10 @@ git commit -m "release: Changes for release $RELEASE_VERSION"
 git push --set-upstream origin merge/release-to-develop/$RELEASE_VERSION
 
 git push origin $RELEASE_VERSION
+
+git branch -D merge/release-to-develop/$RELEASE_VERSION
+
+git branch -D merge/release-to-master/$RELEASE_VERSION
+
+git branch -D   release/$RELEASE_VERSION
+
