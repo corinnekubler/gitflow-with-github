@@ -7,10 +7,10 @@
 
 
 
-    <version>1.1</version>
+    <version>1.2</version>
   </parent>
 
-  <version>1.1</version>
+  <version>1.2</version>
 
 
   <artifactId>core</artifactId>
