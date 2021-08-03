@@ -7,10 +7,10 @@
 
 
 
-    <version>1.5-SNAPSHOT</version>
+    <version>1.6-SNAPSHOT</version>
   </parent>
 
-  <version>1.5-SNAPSHOT</version>
+  <version>1.6-SNAPSHOT</version>
 
 
   <artifactId>core</artifactId>
