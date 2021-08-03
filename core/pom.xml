@@ -7,10 +7,10 @@
 
 
 
-    <version>2.2-SNAPSHOT</version>
+    <version>2.2</version>
   </parent>
 
-  <version>2.2-SNAPSHOT</version>
+  <version>2.2</version>
 
 
   <artifactId>core</artifactId>
