@@ -7,10 +7,10 @@
 
 
 
-    <version>1.4-SNAPSHOT</version>
+    <version>1.4</version>
   </parent>
 
-  <version>1.4-SNAPSHOT</version>
+  <version>1.4</version>
 
 
   <artifactId>core</artifactId>
