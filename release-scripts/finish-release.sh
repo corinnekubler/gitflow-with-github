@@ -1,6 +1,15 @@
 #!/bin/bash
 set -e
 echo "Finish release with maven git flow plugin"
+echo "Checking out master branch"
+git checkout master
+echo "Pulling master branch"
+git pull
+echo "Checking out master branch"
+git checkout develop
+echo "Pulling master branch"
+git pull
+
 
 cd ..
 mvn gitflow:release-finish
@@ -32,11 +41,5 @@ git push --set-upstream origin merge/release-to-develop/$RELEASE_VERSION
 echo "Pushing Tag for release"
 git push origin $RELEASE_VERSION
 
-echo "Deleting temporaty branches for release"
-git branch -D merge/release-to-develop/$RELEASE_VERSION
-
-git branch -D merge/release-to-master/$RELEASE_VERSION
-
-git branch -D release/$RELEASE_VERSION
 
 echo "If everything is ok then run clean-release.sh"
