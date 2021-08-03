@@ -1,23 +1,19 @@
+#!/bin/bash
 set -e
 
 echo "Starting release"
 
 echo "Checking out develop branch"
 git checkout develop
-echo "Pull last changes"
+echo "Pulling last changes"
 git pull
 
-echo "Start release with maven git flow plugin"
+echo "Starting release with maven git flow plugin"
 mvn gitflow:release-start
 MVN_VERSION=$(mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec)
-find="-SNAPSHOT"
-replace=""
-RELEASE_VERSION=${MVN_VERSION//$find/$replace}
+RELEASE_VERSION=${MVN_VERSION//"-SNAPSHOT"/""}
 echo "RELEASE $RELEASE_VERSION"
 echo "Pushing release branch"
 git push --set-upstream origin release/$RELEASE_VERSION
-
-
-echo "Release branch was pushed with snapshot version. The deployment should have been trigerred on QA env."
-echo "Once all the tests will be  ok then run finish-release.sh script."
+echo "To finish up the release process, run finish-release.sh"
 exit 0
