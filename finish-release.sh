@@ -1,6 +1,13 @@
 #!/bin/bash
 set -e
 echo "Finish release with maven git flow plugin"
+git checkout develop
+echo "Pulling develop branch"
+git pull
+git checkout master
+echo "Pulling master branch"
+git pull
+
 mvn gitflow:release-finish
 
 
