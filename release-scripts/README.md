@@ -25,6 +25,6 @@ At the end:
  - the POM versions are set to ($RELEASE_VERSION+1)-SNAPSHOT in develop branch.
 
 ## Cleaning a release
-If everything is ok then we can launch the `clean-release.sh`
+If everything is ok then launch the `clean-release.sh`
 This script will remove all the branches created for the release (local and remote)
 
