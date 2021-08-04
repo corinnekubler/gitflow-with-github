@@ -1,10 +1,11 @@
 #!/bin/bash
+
 push-release-changes-on-new-branch()
 {
   BRANCH=$1
   RELEASE_VERSION=$2
   git checkout -b $BRANCH
-  git commit -m 'release: changes for release $RELEASE_VERSION'"
+  git commit -m 'release: changes for release $RELEASE_VERSION'
   echo "Pushing the branch $BRANCH"
   git push --set-upstream $BRANCH
 }
