@@ -7,7 +7,7 @@ push-release-changes-on-new-branch()
   git checkout -b $BRANCH
   git commit -m 'release: changes for release $RELEASE_VERSION'
   echo "Pushing the branch $BRANCH"
-  git push --set-upstream $BRANCH
+  git push --set-upstream origin $BRANCH
 }
 
 
